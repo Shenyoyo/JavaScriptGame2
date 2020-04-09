@@ -1,0 +1,56 @@
+
+    :root {
+        --mouse-x;
+        --mouse-y;
+        --radius: 40px;
+        --factor:1;
+        --sacle;
+    }
+
+    body{
+
+        background-color: black;
+    }
+
+    #boll{
+
+        width: var(--radius);
+        height: var(--radius);
+        border-radius: 50%;
+        background-color: #FBD771;
+        position: absolute;
+        
+        transform: translate(calc( var(--mouse-x) * 1px - var(--radius)/2),calc(var(--mouse-y) * 1px - var(--radius)/2));
+
+
+    }
+    .halo{
+
+        width: var(--radius);
+        height: var(--radius);
+        border-radius: 50%;
+        opacity: 0.15;
+        background-color: #FBD771;
+        position: absolute;
+
+        transform: scale(calc(var(--factor)*var(--sacle)));
+
+    }
+
+    .halo:nth-of-type(1){
+
+        --factor:0.3;
+
+    }
+
+    .halo:nth-of-type(2){
+
+        --factor:0.5;
+
+    }
+
+    .halo:nth-of-type(3){
+
+        --factor:0.9;
+
+    }
